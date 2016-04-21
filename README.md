@@ -1,6 +1,11 @@
 # TwitterClone
 A Twitter clone for my cat Wendell built with Backbone.
 
+**To run application:**
+* Install npm 
+* From root directory, "npm run start"
+* Site runs on localhost:3000
+
 **Future updates to be completed**
 * Add "edit" functionality to tweets
 * Add page of other cats that Wendell is following
