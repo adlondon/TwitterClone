@@ -5,8 +5,8 @@ var tmpl = require('./templates');
 module.exports = Backbone.View.extend({
   template: _.template(tmpl.bitterPost),
   initialize: function () {
-    this.listenTo(this.model, 'update', this.render);
-    this.listenTo(this.model, 'change', this.render);
+    this.listenTo(this.model, 'update', this.render().el);
+    this.listenTo(this.model, 'change', this.render().el);
   },
   render: function () {
     var markup = this.template(this.model.toJSON());
