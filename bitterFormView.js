@@ -2,7 +2,8 @@ var Backbone = require('backbone');
 var _ = require('underscore');
 var $ = require('jquery');
 var tmpl = require('./templates');
-var BitModel = require('./model')
+var BitModel = require('./model');
+var moment = require('moment')
 
 
 module.exports = Backbone.View.extend({
@@ -12,8 +13,8 @@ module.exports = Backbone.View.extend({
     if(!this.model) {
       this.model = new BitModel({})
     }
-    this.listenTo(this.model, 'change', this.addAll)
-    this.listenTo(this.model, 'update', this.addAll)
+    // this.listenTo(this.model, 'change', this.addAll)
+    // this.listenTo(this.model, 'update', this.addAll)
     this.render();
   },
   render: function () {
@@ -26,16 +27,20 @@ module.exports = Backbone.View.extend({
   },
   twitPost: function (event) {
     event.preventDefault();
-    console.log("SUBMIT CLICKED`");
-    this.model.set({
-      username: this.$el.find('input[name="username"]').val(),
-      post: this.$el.find('textarea[name="post"]').val()
-    });
+    console.log("SUBMIT CLICKED", event);
+    var id = Math.floor(Math.random()*10000);
+    var today = moment().format("DD MMM YYYY");
+    var saveThing = {
+      avatar: "wendell.jpg",
+      name: "Wendell",
+      username: "@WendellTheCat ",
+      date: today,
+      post: this.$el.find('textarea[name="post"]').val(),
+      id: id
+    }
     this.$el.find('textarea').val('');
-    console.log(this.collection, "THIS COLLECTION");
-    this.model.save();
-    this.collection.add(this.model)
-    this.model = new BitModel({})
-
+    this.collection.create(saveThing);
+    console.log(this.collection, "COLLECTION");
+    // this.model = new BitModel({})
   }
 })

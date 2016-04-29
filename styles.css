@@ -1,2 +1,170 @@
 body {
-  background-color: blue; }
+  background-color: #F5F8FA; }
+
+textarea, input, button {
+  outline: none; }
+
+.container {
+  padding: 0; }
+
+.navbar {
+  margin-bottom: 0;
+  box-shadow: 0px 0px 1px black; }
+  .navbar .nav-tags {
+    margin-left: 5px; }
+
+.jumbotron {
+  background-color: #0084B4;
+  height: 235px;
+  border-bottom: 60px solid white;
+  margin-bottom: 10px; }
+
+.modal-title {
+  text-align: center; }
+
+.modal-body {
+  background-color: #E6F3F8;
+  border-radius: 7px; }
+
+.new-tweet form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse; }
+  .new-tweet form textarea {
+    width: 100%; }
+
+.edit-tweet {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row-reverse; }
+  .edit-tweet textarea {
+    width: 100%; }
+  .edit-tweet button {
+    margin: 5px; }
+
+.name {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 0; }
+
+.feather {
+  width: 18px;
+  margin-right: 4px; }
+
+.username-main {
+  color: gray; }
+
+.img-rounded {
+  border-radius: 15px !important; }
+
+.main-image {
+  width: 200px;
+  border-radius: 15px;
+  margin-top: -190px;
+  border: 5px solid white; }
+
+.avatar {
+  width: 48px;
+  padding: 0;
+  border-radius: 5px;
+  margin-right: 10px; }
+
+.img-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  margin: 8px;
+  margin-left: 16px; }
+
+.tweet-btn {
+  height: 32px;
+  margin: 8px;
+  background-color: #339CC3;
+  transition: all .3s ease-in-out; }
+  .tweet-btn:hover {
+    background-color: #0084B4; }
+  .tweet-btn:focus {
+    outline-color: transparent;
+    outline-style: none; }
+
+.twitter-icon {
+  margin-top: 12px;
+  font-size: 20px;
+  position: absolute;
+  left: 50%;
+  color: #63aeee; }
+
+.search-input {
+  width: 100%;
+  height: 32px;
+  padding: 5px 27px 6px 12px;
+  font-size: 12px;
+  line-height: 1;
+  color: #292f33;
+  background-color: #f5f8fa;
+  border: 1px solid #e1e8ed;
+  border-radius: 21px;
+  margin-top: 8px; }
+
+.aside-wrapper {
+  margin-left: 5px; }
+
+.glyphicon-calendar {
+  color: gray; }
+
+.icon-tags {
+  margin-left: 5px; }
+
+.tweet-wrapper {
+  background-color: white;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  padding-bottom: 5px;
+  font-size: 20px;
+  padding: 10px; }
+  .tweet-wrapper .current {
+    font-weight: 500;
+    color: black; }
+  .tweet-wrapper ul {
+    padding-left: 5px; }
+    .tweet-wrapper ul li {
+      display: inline-block;
+      margin-right: 20px;
+      color: #339CC3; }
+  .tweet-wrapper .tweet-post {
+    font-size: 16px;
+    background-color: white;
+    padding: 5px;
+    border-top: 1px solid gainsboro; }
+    .tweet-wrapper .tweet-post .tagline {
+      color: gray; }
+      .tweet-wrapper .tweet-post .tagline .name {
+        color: black;
+        font-weight: bolder;
+        font-size: 16px; }
+    .tweet-wrapper .tweet-post .post {
+      display: inline-block; }
+    .tweet-wrapper .tweet-post .tweet-left {
+      display: inline-block;
+      width: 90%; }
+    .tweet-wrapper .tweet-post .tweet-right {
+      text-align: right;
+      display: inline-block;
+      width: 10%; }
+
+.follow {
+  font-size: 16px;
+  background-color: white;
+  padding: 5px;
+  border: 1px solid gainsboro;
+  border-radius: 5px; }
+  .follow .friends {
+    padding: 15px;
+    border-top: 1px solid gainsboro; }
+    .follow .friends .tagline {
+      color: gray; }
+      .follow .friends .tagline .name {
+        color: black;
+        font-weight: bolder;
+        font-size: 16px; }

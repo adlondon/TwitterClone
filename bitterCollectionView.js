@@ -3,13 +3,14 @@ var _ = require('underscore');
 var $ = require('jquery');
 var BitterModelView = require('./bitterModelView')
 
-
 module.exports = Backbone.View.extend({
   el: '.feed',
   initialize: function () {
     this.addAll();
     this.listenTo(this.collection, 'update', this.addAll);
-    this.listenTo(this.collection, 'change', this.addAll)
+    // this.listenTo(this.collection, 'change', this.addAll)
+    // this.listenTo(this.collection, 'add', this.addAll)
+    // this.collection.on('add', this.addAll, this);
   },
 
   addAll: function () {
@@ -19,6 +20,6 @@ module.exports = Backbone.View.extend({
 
   addOne: function (el) {
     var bitterModelView = new BitterModelView({model: el})
-    this.$el.append(bitterModelView.render().el);
+    this.$el.prepend(bitterModelView.render().el);
   }
 })

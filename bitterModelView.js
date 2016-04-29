@@ -6,7 +6,6 @@ module.exports = Backbone.View.extend({
   template: _.template(tmpl.bitterPost),
   initialize: function () {
     this.listenTo(this.model, 'update', this.render().el);
-    this.listenTo(this.model, 'change', this.render().el);
   },
   render: function () {
     var markup = this.template(this.model.toJSON());
@@ -15,6 +14,14 @@ module.exports = Backbone.View.extend({
   },
   events: {
     'click .delete': 'twitDelete',
+    'click .edit': 'editTweet',
+  },
+  editTweet: function () {
+    this.model.set({
+      post: this.$el.find('input').val(),
+    });
+    this.model.save();
+    this.render().el;
   },
   twitDelete: function (event) {
     event.preventDefault();

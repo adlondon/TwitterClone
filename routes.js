@@ -12,11 +12,11 @@ module.exports = Backbone.Router.extend({
   home: function () {
     var that = this; //constructor context
     var bitterCol = new BitterCollection();
-    var bitFormView = new FormView({collection: bitterCol});
+
 
     bitterCol.fetch().then(function (data) {
-      var collection = new BitterCollection(data);
-      that.renderSubview(new BitterCollectionView({collection: collection}));
+    var bitFormView = new FormView({collection: bitterCol});
+      that.renderSubview(new BitterCollectionView({collection: bitterCol}));
     });
   },
   renderSubview: function (subview) {
