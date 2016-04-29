@@ -18,7 +18,7 @@ module.exports = Backbone.View.extend({
   },
   editTweet: function () {
     this.model.set({
-      post: this.$el.find('input').val(),
+      post: this.$el.find('textarea').val(),
     });
     this.model.save();
     this.render().el;
